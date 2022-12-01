@@ -1,9 +1,23 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+ if (typeof word===`string`) {
+  let backwardsWord = ``
+  for (i = 0; i < word.length; i++) {
+     char = word.charAt(i);
+     backwardsWord = char+backwardsWord;
+  }
+   return word === backwardsWord? true : false
+ } else {
+    return false;
+ }
 }
 
 /* 
-  Add your pseudocode here
+  isPalindrome input something
+  if arg is string continue, else : return false
+  takes something and turns it into array
+  takes array from beginning to end and adds each letter to existing array
+  something === backwardsWordArray.toString()? true : false
+
 */
 
 /*
